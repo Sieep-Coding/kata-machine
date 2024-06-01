@@ -32,7 +32,6 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
     //pre
     seen[curr.y][curr.x] = true;
     path.push(curr);
-
     //recurse
     for (let i = 0; i < dir.length; ++i) {
         const [x, y] = dir[i];
@@ -45,8 +44,7 @@ function walk(maze: string[], wall: string, curr: Point, end: Point, seen: boole
     }
     // post
     path.pop();
-
-    return false;
+        return false;
 }
 
 export default function solve(maze: string[], wall: string, start: Point, end: Point): Point[] {
